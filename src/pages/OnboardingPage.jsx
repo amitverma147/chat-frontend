@@ -4,6 +4,7 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 import toast from "react-hot-toast";
 import { completeOnboarding } from "../lib/api";
 import {
+  CameraIcon,
   LoaderIcon,
   MapPinIcon,
   ShipWheelIcon,
@@ -71,7 +72,7 @@ const OnboardingPage = () => {
                   />
                 ) : (
                   <div className="flex items-center justify-center h-full">
-                    <CameraIcon className="size-12 text-base-content opacity-40" />
+                    <CameraIcon  className="size-12 text-base-content opacity-40" />
                   </div>
                 )}
               </div>
