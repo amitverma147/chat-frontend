@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { ShipWheelIcon } from "lucide-react";
 import { Link } from "react-router";
-import SideImage from "../../public/i.png";
 import useLogin from "../hooks/useLogin";
+import SideImage from "../../public/i.png";
 
 const LoginPage = () => {
   const [loginData, setLoginData] = useState({
@@ -10,12 +10,13 @@ const LoginPage = () => {
     password: "",
   });
 
-  const { error, isPending, loginMutation } = useLogin();
+  const { isPending, error, loginMutation } = useLogin();
 
   const handleLogin = (e) => {
     e.preventDefault();
     loginMutation(loginData);
   };
+
   return (
     <div
       className="h-screen flex items-center justify-center p-4 sm:p-6 md:p-8"
@@ -141,5 +142,4 @@ const LoginPage = () => {
     </div>
   );
 };
-
 export default LoginPage;
