@@ -35,7 +35,7 @@ const App = () => {
                 <Home />
               </Layout>
             ) : (
-              <Navigate to={!isAuthenticated ? "/login" : "/onboarding"} />
+              <Navigate to={!isAuthenticated ? "/signin" : "/onboarding"} />
             )
           }
         />
@@ -50,7 +50,7 @@ const App = () => {
           }
         />
         <Route
-          path="/login"
+          path="/signin"
           element={
             !isAuthenticated ? (
               <LoginPage />
@@ -67,7 +67,7 @@ const App = () => {
                 <NotificationsPage />
               </Layout>
             ) : (
-              <Navigate to={!isAuthenticated ? "/login" : "/onboarding"} />
+              <Navigate to={!isAuthenticated ? "/signin" : "/onboarding"} />
             )
           }
         />
@@ -77,7 +77,7 @@ const App = () => {
             isAuthenticated && isOnboarded ? (
               <CallPage />
             ) : (
-              <Navigate to={!isAuthenticated ? "/login" : "/onboarding"} />
+              <Navigate to={!isAuthenticated ? "/signin" : "/onboarding"} />
             )
           }
         />
@@ -90,7 +90,7 @@ const App = () => {
                 <ChatPage />
               </Layout>
             ) : (
-              <Navigate to={!isAuthenticated ? "/login" : "/onboarding"} />
+              <Navigate to={!isAuthenticated ? "/signin" : "/onboarding"} />
             )
           }
         />
@@ -105,7 +105,7 @@ const App = () => {
                 <Navigate to="/" />
               )
             ) : (
-              <Navigate to="/login" />
+              <Navigate to="/signin" />
             )
           }
         />

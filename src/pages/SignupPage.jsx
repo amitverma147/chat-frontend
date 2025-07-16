@@ -2,7 +2,7 @@ import { useState } from "react";
 import { ShipWheelIcon } from "lucide-react";
 import { Link } from "react-router";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { axiosInstance } from "../lib/axios.js";
+import SideImage from "../../public/i.png";
 import { signup } from "../lib/api.js";
 const SignupPage = () => {
   const [signupData, setSignupData] = useState({
@@ -172,7 +172,7 @@ const SignupPage = () => {
             {/* Illustration */}
             <div className="relative aspect-square max-w-sm mx-auto">
               <img
-                src="/i.png"
+                src={SideImage}
                 alt="Language connection illustration"
                 className="w-full h-full"
               />
