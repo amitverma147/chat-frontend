@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ShipWheelIcon } from "lucide-react";
 import { Link } from "react-router";
-import SideImage from "../../public/i.png";
+import SideImage from "../assets/i.png";
 import useSignUp from "../hooks/useSignUp.js";
 
 const SignupPage = () => {

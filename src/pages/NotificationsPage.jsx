@@ -16,6 +16,9 @@ const NotificationsPage = () => {
     queryFn: getFriendRequests,
   });
 
+  //mutate-function to accept a friend request
+  //this will update the friend requests and friends list in the query cache
+
   const { mutate: acceptRequestMutation, isPending } = useMutation({
     mutationFn: acceptFriendRequest,
     onSuccess: () => {
